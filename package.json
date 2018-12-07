@@ -6,19 +6,23 @@
   "author": "Filipe Dos Santos Mendes <fildos@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "coverage": "istanbul cover tape specs/*.spec.js | faucet",
-    "test": "tape specs/*.spec.js | faucet"
+    "coverage": "nyc riteway specs/*.spec.js | tap-nirvana",
+    "test": "riteway specs/*.spec.js | tap-nirvana"
   },
   "devDependencies": {
+    "@types/ramda": "^0.25.42",
     "eslint": "^5.9.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "faucet": "^0.0.1",
-    "istanbul": "^0.4.5",
+    "nyc": "^13.1.0",
+    "riteway": "^4.0.1",
     "standard": "^12.0.1",
-    "tape": "^4.9.1"
+    "tap-nirvana": "^1.1.0"
+  },
+  "dependencies": {
+    "ramda": "^0.26.1"
   }
 }
